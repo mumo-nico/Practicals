@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "use strict";
+
+        // function test(){
+        //     let count =0;
+        //     function print(){
+        //       return count;
+        //     }
+        //    print();
+        // }
+        // console.log(test());
+        
+        // function test(){
+        //     let count =0;
+        //    return function (){
+        //       return count;
+        //     }
+           
+        // }
+        // let result = test();
+        // console.log(result());
+
+        // let test=()=>{
+        //     let count = 0;
+        //    return ()=>{
+        //       return count;
+        //     }
+           
+        // }
+        // let result = test();
+        // console.log(result());
+
+        let test =(count) => ()=> count;
+        
+        let result = test(5);
+         console.log(result());
+    </script>
+</body>
+</html>

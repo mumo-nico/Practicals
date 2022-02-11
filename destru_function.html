@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "use strict";
+         
+        function sum(num1=0,num2=0,...args){
+        let value =0;
+        for (let arr of args){
+            //console.log(arr);
+            value += arr;
+        }
+        return num1+num2+value;
+        
+        }
+        
+        
+        console.log(sum(10));
+        console.log(sum(10,2));
+        console.log(sum(10,3,2));
+
+        function sum2(){
+            console.log(arguments.length);
+        }
+        sum2()
+    </script>
+</body>
+</html>

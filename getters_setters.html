@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         class Employees{
+        constructor(empId, firstName, lastName, phone, email){
+            this.empId = empId;
+           this.firstName  = firstName;
+           this.lastName = lastName;
+           this.phone = phone;
+           this.email = email;
+        }
+
+        get getId(){
+            return this.empId;
+        }
+        get getFirstName(){
+            return this.firstName;
+        }
+        
+        get getLastName(){
+            return this.lastName;
+        }
+        
+        get getPhone(){
+            return this.phone;
+        }
+        
+        get getEmail(){
+            return this.email;
+        }
+        set setId(id){
+            this.empId = id;
+        }
+        set setFirstName(fname){
+            this.firstName = fname;
+        }
+        set setLastName(lname){
+            this.lastName = lname;
+        }
+        set setPhone(phne){
+            this.phone = phne;
+        }
+        set setEmail(ema){
+            this.email = ema;
+        }
+    }
+    // class Developer  extends Employees{
+    //     constructor(empId, firstName, lastName, phone, email, skills){
+    //         super(empId, firstName, lastName, phone, email);
+    //         this.skills = skills;
+    //     }
+    // }
+    // let developer = new Developer(10, "Tej", "Roman", "0758815721", "roman@gmail.com", "JavaScript");
+  
+    // console.log(developer.empId)
+
+    let employees = new Employees(10, "Tej", "Roman", "0758815721", "roman@gmail.com");
+    console.log(employees.getId);
+
+    employees.setEmail = "tejj@gmail.com";
+    console.log(employees.getEmail);
+    </script>
+</body>
+</html>

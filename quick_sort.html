@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+
+        function swap(arr, i, j){
+            let temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+        }
+
+        function partition(arr, left, right){
+            let i = left;
+            let j = i;
+
+            let pivot = arr[right];
+                while(i < right){
+                    if(pivot > arr[i]){
+                        swap(arr, i, j);
+                        j++;
+                    }
+                    i++;
+                }
+            swap(arr, j, right);
+            return arr;
+        }
+
+        function quickSort(arr, left, right){
+            if (left >= right) return;
+                let index = partition(arr, left, right);
+                quickSort(arr, left, index-1);
+                quickSort(arr, index+1, right)
+            
+
+        }
+        let arr = [2, 3, 8, 5, 9];
+        console.log(partition(arr, 0, arr.length-1));
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // "use strict"; - in class it is there by default you dont need to add it there
+// instantiation of a class - creates a class's object
+        class Student {
+            constructor(id, name){
+                this.id = id;
+                this.name = name;
+            }
+            printDetails(){
+                console.log(this.id + " " + this.name);
+            }
+            
+        }
+        let student = new Student(123, "John");
+        student.printDetails();
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Employees{
+            constructor(empId, firstName, lastName){
+                this.empId = empId;
+                this.firstName = firstName;
+                this.lastName = lastName;
+            }
+                printDetails(){
+                    console.log(this.empId + " " + this.firstName + " " + this.lastName);
+                }
+        }
+        class Developer extends Employees{
+            // if no object is created, a constructor will be created automatically.
+
+            constructor(empId,firstName,lastName,skills){
+                // this.empId = empId;
+                // this.firstName = firstName; 
+                // this.lastName = lastName;
+                super(empId,firstName,lastName);
+                this.skills = skills;
+            }
+            devDetails(){
+                console.log(this.skills);
+            }
+            printDetails(){
+                    super.printDetails();
+                    this.devDetails();
+                }
+        }
+        let developer = new Developer(10, "Darmian", "Mateo", "Database");
+        developer.printDetails();
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "use strict";
+        let mySet = new Set();
+        let user1 = {name: "John"};
+        let user2 = {name: "Brian"};
+        let user3 = {name: "Sam"};
+//each value can onl occur once 
+        mySet.add(user1);
+        mySet.add(user3);
+        mySet.add(user1);
+        mySet.add(user2);
+        mySet.add(user1);
+
+        for(let value of mySet.values){
+                console.log(value);
+             }
+             console.log(mySet.size);
+        let result = mySet.forEach(value => {
+           return value;
+             });
+             console.log(result);
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "use strict";
+
+        function sum(num1,num2){
+            let result = num1 + num2;
+            return result;
+        }
+        console.log(sum(10, 20));
+        // let res = sum(10,20);
+        // console.log(res);
+
+
+        //using a default parameter
+        function sum2(num1,num2=0){
+            let result = num1 + num2;
+            return result;
+        }
+        console.log(sum2(10)); //when a value is assigned to num2, it will over write the default parameter
+
+    </script>
+</body>
+</html>

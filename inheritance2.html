@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // class Student{
+    //         static printDetails(){
+    //             console.log("Testing");
+    //         }
+    //     }
+    //     Student.printDetails();
+       
+
+    // class Employees{
+    //     #counter = 10;
+    // }
+    // class Developer  extends Employees{
+    //     printCounter(){
+    //         console.log(this.counter);
+    //     }
+    // }
+    // let developer = new Developer();
+    // developer.printCounter();
+
+    class Employees{
+         constructor(empId, firstName, lastName, phoneNum, emailAddress){
+            this.empId = empId;
+           this.firstName  = firstName;
+           this.lastName = lastName;
+           this.phoneNum = phoneNum;
+           this.emailAddress = emailAddress;
+        }
+    }
+    class Developer  extends Employees{
+        constructor(empId, firstName, lastName, phoneNum, emailAddress, skills){
+            super(empId, firstName, lastName, phoneNum, emailAddress);
+            this.skills = skills;
+        }
+        // printCounter(){
+        //     console.log(this.empId + " " + this.firstName + " " + this.skills);
+        // }
+    }
+    let developer = new Developer(10, "Tej", "Roman", "0758815721", "roman@gmail.com", "JavaScript");
+    // developer.printCounter();
+    console.log(developer.empId)
+    </script>
+</body>
+</html>

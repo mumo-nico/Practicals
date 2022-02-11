@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "use strict";
+
+        try {
+            let student = {
+                id: 1,
+                name: "John",
+                age: null
+            }
+            if (student.age === undefined){
+                throw new ReferenceError("You are trying to access invalid value");
+            } else {
+                console.log(student.age);
+            }
+        }catch(error) {
+            console.log("something went wrong " + error);
+        }finally{
+            console.log("end of execition");
+        }
+    </script>
+</body>
+</html>
